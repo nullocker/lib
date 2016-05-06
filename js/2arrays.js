@@ -15,7 +15,7 @@ function createMatrix(row, col) {
 }
 
 function sortArray(arr) {
-    var $arr = arr.slice();
+    var $arr = arr.valueOf();
 
     for (var i = 0; i < $arr.length; i++) {
         for (var j = 0, x = 0; j < $arr.length; j++) {
