@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic");
+@import "fontawsome/css/font-awesome.css";
+@import "bootstrap/css/bootstrap.css";
+
+body {
+    font-family: "Liberation Sans", "Open Sans", "Arial", sans-serif;
+    font-size: 15px;
+}
+
+a {
+    color: #0059B2;
+}
+
+a:hover,
+a:focus {
+    color: #ba1000;
+}
