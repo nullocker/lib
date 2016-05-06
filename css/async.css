@@ -15,3 +15,7 @@ a:hover,
 a:focus {
     color: #ba1000;
 }
+
+pre {
+    box-shadow: 1px 1px 8px #555555;
+}
