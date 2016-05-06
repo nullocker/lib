@@ -1,6 +1,6 @@
 "use strict";
 
-var chai = require("/usr/local/node/lib/node_modules/chai");
+// var chai = require("/usr/local/node/lib/node_modules/chai");
 var assert = chai.assert;
 
 describe("getLastDay", function() {
