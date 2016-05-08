@@ -29,12 +29,31 @@ function resetClass($this) {
     return $this;
 }
 
-/*SEPARATOR*/
+function getNumbers() {
+    var int = {
+        sum: function () {
+            return this.a + this.b;
+        },
+        mlt: function () {
+            return this.a * this.b;
+        },
+        inp: function (a, b) {
+            this.a = a;
+            this.b = b;
+        }
+    };
 
-document.getElementById("scripts").innerHTML = setObject();
+    int.inp(3, 3);
+    document.getElementById("value1").innerHTML = int.sum();
+    document.getElementById("value2").innerHTML = int.mlt();
+    return int;
+}
+
+/*SEPARATOR*/
 
 var out = [
     setObject(),//0
+    getNumbers(),//1
 ];
 
-console.log(out[0]);
+console.log(out[1]);
