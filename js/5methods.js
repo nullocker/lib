@@ -1,59 +1,40 @@
 "use strict";
 
-function setObject() {
+function fuckJavaScript() {
     var obj = {
+        key0: "cls0",
         key1: "cls1",
-        key2: "cls2",
-        key3: "cls3",
 
-        resetKey: function () {
-            this.key1 = "";
+        setEmpty: function () {
+            this.key0 = "";
         },
-        resetClass: function () {
-            resetClass(this);
+        changeClass: function (key, cls) {
+            changeClass(this, key, cls);
+        },
+        toString: function (key) {
+            return this[key];
         }
-
     };
 
-    obj.resetKey();
-    obj.resetClass();
-    return obj.key3;
+    obj.setEmpty();
+    obj.changeClass("key0", "cls0");
+    document.getElementById("console").innerHTML = obj.toString("key0");
+    return obj;
 }
 
-function resetClass($this) {
+function changeClass(obj, key, cls) {
 
-    if ($this.key2 == "cls2") {
-        $this.key2 = "";
+    if (obj[key] != null) {
+        obj[key] = cls;
     }
 
-    return $this;
-}
-
-function getNumbers() {
-    var int = {
-        sum: function () {
-            return this.a + this.b;
-        },
-        mlt: function () {
-            return this.a * this.b;
-        },
-        inp: function (a, b) {
-            this.a = a;
-            this.b = b;
-        }
-    };
-
-    int.inp(3, 3);
-    document.getElementById("value1").innerHTML = int.sum();
-    document.getElementById("value2").innerHTML = int.mlt();
-    return int;
+    return obj;
 }
 
 /*SEPARATOR*/
 
 var out = [
-    setObject(),//0
-    getNumbers(),//1
+    fuckJavaScript(),//0
 ];
 
-console.log(out[1]);
+console.log(out[0]);
